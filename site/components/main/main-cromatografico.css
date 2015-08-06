@@ -183,6 +183,7 @@ header h1.small{
 
 .footer {
   position: fixed;
+  bottom: 0;
   width: 100%;
   margin-bottom: 10px;
 }
