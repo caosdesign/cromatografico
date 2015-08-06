@@ -5,21 +5,6 @@
  */
 
 
-ul.share-buttons{
-  list-style: none;
-  padding: 0;
-}
-
-ul.share-buttons li{
-  display: inline;
-  padding: 0 10px;
-  opacity: .3;
-}
-
-ul{
-  margin-bottom: 0;
-}
-
 
 
 body{
@@ -65,19 +50,33 @@ section.wrap {
   height: 100%;
 }
 
-#main-container {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  margin-top: -80px;
-  height: initial;
-}
 
+/* HEADER */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   cursor: default;
+}
+
+ul{
+  margin-bottom: 0;
+}
+
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+  display: none;
+}
+
+ul.share-buttons li{
+  display: inline;
+  padding: 0 10px;
+  opacity: .3;
+}
+
+.share-buttons li:hover{
+  opacity: .6;
 }
 
 header h1.small{
@@ -86,6 +85,21 @@ header h1.small{
   border-bottom: 0;
   border-top: 0;
   padding: 0 24px;
+}
+
+
+/* MAIN - SEARCH, ABOUT AND CAOS BUTTONS*/
+#main-container {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -80px;
+  height: initial;
+}
+
+#main-container .col-xs-2,
+#main-container .col-sm-2 {
+  margin-top: 70px;
 }
 
 #main-container #search-form,
@@ -110,7 +124,7 @@ header h1.small{
 
   font-size: 50px;
   font-weight: 300;
-  opacity: .6;/*.3;*/
+  opacity: .6;
 
   padding-bottom: 0;
   padding-top: 0;
@@ -132,11 +146,12 @@ header h1.small{
   display: inline;
 }
 
-#main-container .col-xs-2,
-#main-container .col-sm-2 {
-  margin-top: 70px;
+#complemento-input {
+  display: none;
 }
 
+
+/* RESULTS - COLOR PALLET */
 #results {
   display: none;
 }
@@ -146,14 +161,6 @@ header h1.small{
   bottom: 0;
   width: 100%;
 }
-
-.resultado-container #footer-container {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
 
 #cores-container{
   padding-bottom: 60px;
@@ -167,31 +174,19 @@ header h1.small{
   display: none;
 }
 
-
-.share-buttons{
-  display: none;
-}
-.share-buttons li:hover{
-  opacity: .6;
-}
-#complemento-input {
-  display: none;
-}
 #cores-container .cor-filho.hover p{
   display: block;
 }
 
-.footer {
-  position: fixed;
+.resultado-container #footer-container {
+  position: absolute;
   bottom: 0;
   width: 100%;
   margin-bottom: 10px;
 }
 
-object[type='application/gas-events-uni'] {
-  display: none;
-}
 
+/* ABOUT PAGE */
 #about-page {
   background: #101010;
 }
@@ -222,9 +217,12 @@ object[type='application/gas-events-uni'] {
 #about-page #main-container p:last-child {
   margin-bottom: 0px;
 }
-#about-page #caos-amarelo {
+#about-page .caos-amarelo {
   color: #ffcc00;
   text-decoration: none;
+}
+#about-page .git-container{
+  margin-top: 30px;
 }
 #about-page .container.dois p {
   border: 5px solid #000;
@@ -242,13 +240,18 @@ object[type='application/gas-events-uni'] {
   position: absolute;
   margin-top: -50%;
 }
-
-
 #about-page img{
   width: 100%;
 }
+#about-page .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
 
 
+/* MEDIA QUERY */
 @media (max-width: 767px) {
   #cores-container .cor-filho p{
     display: none !important;
@@ -278,4 +281,10 @@ object[type='application/gas-events-uni'] {
   #about-page #main-container{
     padding: 0 40px;
   }
+}
+
+
+/* fix */
+object[type='application/gas-events-uni'] {
+  display: none;
 }

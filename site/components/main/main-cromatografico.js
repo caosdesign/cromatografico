@@ -8,23 +8,31 @@
 (function () {
   'use strict';
 
-  var cor_media_r = 0,
-  cor_media_g = 0,
-  cor_media_b = 0,
-  cor_total_r = 0,
-  cor_total_g = 0,
-  cor_total_b = 0,
+  var average_color_r = 0,
+  average_color_g = 0,
+  average_color_b = 0,
+  total_color_r = 0,
+  total_color_g = 0,
+  total_color_b = 0,
   quant = 10,
   totalR = 0,
   totalG = 0,
   totalB = 0;
+
+
+
+  //TRANSLATE
 
   var text_translate = {
     text_pt: ["processando", "limpar", "tente outra palavra", "qual a palavra?"],
     text_en: ["loading", "clear", "try another word", "what's the word?"]
   };
 
-  //Function to convert hex format to a rgb color based on jquery.average-color by @LeeMallabone
+
+
+  // GET AVERAGE COLOR FROM IMAGE
+
+  /* function to get average rgb color from an image is based on jquery.average-color by @LeeMallabone */
   var rgb2hex = function (rgb){
    rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
    return '#' +
@@ -34,7 +42,7 @@
   };
 
   var averageColor = function (imagem) {
-    var blockSize = 100, // only sample every 5 pixels
+    var blockSize = 100, // only sample every 100 pixels
       defaultRGB = {r: 0, g: 0, b: 0}, // for non-supporting environments
       canvas = document.createElement('canvas'),
       context = canvas.getContext && canvas.getContext('2d'),
@@ -56,7 +64,6 @@
     try {
         data = context.getImageData(0, 0, width, height);
     } catch (e) {
-        // security error, the image was served from a different domain
         return defaultRGB;
     }
 
@@ -65,8 +72,9 @@
     while ((i += blockSize * 4) < length) {
       var maior = Math.max(data.data[i], data.data[i+1], data.data[i+2]);
       var menor = Math.min(data.data[i], data.data[i+1], data.data[i+2]);
-
-      if ((maior - menor) > 50){ // se não for cinza
+      
+      /* TO DO: avoid grayish colors - tentativa de reduzir 'efeito massinha' */
+      if ((maior - menor) > 50){ 
         count += 1;
         rgb.r += data.data[i];
         rgb.g += data.data[i + 1];
@@ -74,7 +82,7 @@
       }
     }
     
-    // ~~ used to floor values
+    // used to floor values
     rgb.r = ~~(rgb.r / count);
     rgb.g = ~~(rgb.g / count);
     rgb.b = ~~(rgb.b / count);
@@ -87,29 +95,31 @@
       return 'rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ')';
   };
 
-  var calculaMediaR = function (_value) {
-    cor_total_r += _value;
+
+  /* TO DO: avoid using same function only because of using different variables */
+  var calculateAverageR = function (_value) {
+    total_color_r += _value;
     totalR += 1;
-    calculaMediaDeTudo();
+    calculateAllAverage();
   };
-  var calculaMediaG = function (_value) {
-    cor_total_g += _value;
+  var calculateAverageG = function (_value) {
+    total_color_g += _value;
     totalG += 1;
-    calculaMediaDeTudo();
+    calculateAllAverage();
   };
-  var calculaMediaB = function (_value) {
-    cor_total_b += _value;
+  var calculateAverageB = function (_value) {
+    total_color_b += _value;
     totalB += 1;
-    calculaMediaDeTudo();
+    calculateAllAverage();
   };
 
-  var calculaMediaDeTudo = function(){
-    cor_media_r = Math.round(cor_total_r / totalR);
-    cor_media_g = Math.round(cor_total_g / totalG);
-    cor_media_b = Math.round(cor_total_b / totalB);
-    var rbg_str = 'rgb('+cor_media_r+','+cor_media_g+','+cor_media_b+')';
+  var calculateAllAverage = function(){
+    average_color_r = Math.round(total_color_r / totalR);
+    average_color_g = Math.round(total_color_g / totalG);
+    average_color_b = Math.round(total_color_b / totalB);
+    var rbg_str = 'rgb('+average_color_r+','+average_color_g+','+average_color_b+')';
     $('body').css('background',rbg_str);
-    if(cor_media_r >0 && cor_media_g >0 && cor_media_b >0){
+    if(average_color_r >0 && average_color_g >0 && average_color_b >0){
       $('#footer-container p.texto').text(rgb2hex(rbg_str));
     }
     return rbg_str;
@@ -117,18 +127,21 @@
 
 
 
+  // GET IMAGES FROM GOOGLE SEARCH AND APPEND RESULTING TREATED CONTENTS (COLOR PALLET)
   $(document).ready(function () {
-    var quant_cores = 0;
-    var por_pagina = 8;
-    var googleString = 'https://ajax.googleapis.com/ajax/services/search/images?v=1.0&as_filetype=jpg&restrict=cc_attribute&as_rights=cc_publicdomain|cc_noncommercial|cc_sharealike&imgc=color&imgtype=photo&imgsz=medium|large&rsz='+por_pagina;//&start=0&q=';
+    var quant_colors = 0;
+    var per_page = 8; // api max
+    var googleString = 'https://ajax.googleapis.com/ajax/services/search/images?v=1.0&as_filetype=jpg&restrict=cc_attribute&as_rights=cc_publicdomain|cc_noncommercial|cc_sharealike&imgc=color&imgtype=photo&imgsz=medium|large&rsz='+per_page;//&start=0&q=';
     
     var searchcall = function (argument) {
       resetTool(my_text_trans[0]);
       $('#complemento-input').css('cursor','default');
+
+      /* TODO: when images has problems with crossOrigin, it fails to complete the color pallete. we are temporarily getting more image results. */
       startSearch(argument,(0)+1);
-      startSearch(argument,((por_pagina*1)+1));
-      startSearch(argument,((por_pagina*2)+1));
-      startSearch(argument,((por_pagina*3)+1));
+      startSearch(argument,((per_page*1)+1));
+      startSearch(argument,((per_page*2)+1));
+      startSearch(argument,((per_page*3)+1));
 
     };
 
@@ -146,7 +159,7 @@
             $('#complemento-input').text(my_text_trans[2]);//('tente outra palavra');
           } else {
             for (var i = 0; i < result_var.length; i++) {
-              if(quant_cores < 10){resultSearchLoop(result_var,i)};
+              if(quant_colors < quant){resultSearchLoop(result_var,i)};
             }
           }
         },
@@ -158,7 +171,7 @@
     };
 
     var resetTool = function (complemento) {
-      quant_cores = cor_media_r = cor_media_g = cor_media_b = cor_total_r = cor_total_g = cor_total_b = totalR = totalG = totalB = 0;
+      quant_colors = average_color_r = average_color_g = average_color_b = total_color_r = total_color_g = total_color_b = totalR = totalG = totalB = 0;
       $('#cores-container').empty();
       $('#complemento-input').text(complemento);
       $('#footer-container p.texto').text('');
@@ -173,13 +186,13 @@
       $img_element.crossOrigin = 'anonymous';
 
       $img_element.on('load', function() {
-        if(quant_cores < 10){
+        if(quant_colors < quant){
           var _r = averageColor($(this)[0]).r,
           _g = averageColor($(this)[0]).g,
           _b = averageColor($(this)[0]).b;
-          calculaMediaR(_r);
-          calculaMediaG(_g);
-          calculaMediaB(_b);
+          calculateAverageR(_r);
+          calculateAverageG(_g);
+          calculateAverageB(_b);
 
           var rbg_str = 'rgb('+_r+','+_g+','+_b+')',
           hex_str = rgb2hex(rbg_str),
@@ -197,7 +210,7 @@
           
             $('#cores-container').append( '<div class="cor-filho col-sm-1 col-xs-1" style="background: '+rbg_str+'" img-ref="'+this.src+'"><p class="texto text-uppercase">'+hex_str+'</p></div>' );
 
-            quant_cores = $('#cores-container .cor-filho').length;
+            quant_colors = $('#cores-container .cor-filho').length;
 
             $('#cores-container .cor-filho').hover(
               function() {
@@ -216,7 +229,7 @@
     };
 
 
-
+    // START QUERY
     $('#search-form').submit(function(event) {
       event.preventDefault();
       $('#results').empty();
@@ -244,6 +257,9 @@
     }
 
 
+
+    // CLEAR BUTTON AND BEHAVIORS
+    
     $('#complemento-input').click(function(event){
       if($(this).text() == my_text_trans[1]){//'limpar'){
         resetTool('');
