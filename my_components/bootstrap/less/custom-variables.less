@@ -1,0 +1,85 @@
+@gray-darker: #333;
+@gray: #666;
+@gray-base:              #3f3f3f;
+@white-base: #fff;
+
+@font-family-sans-serif:  'Open Sans';//'Source Sans Pro', sans-serif;
+@font-size-base:          16px;
+
+@body-bg:               @white-base;//@gray-darker;
+
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+@body-bg:               #fff;
+//** Global text color on `<body>`.
+@text-color:            #000;//@gray-dark;
+
+//** Global textual link color.
+@link-color:            #000;//@brand-primary;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      #000;//darken(@link-color, 15%);
+//** Link hover decoration.
+@link-hover-decoration: none;//underline;
+
+//== Forms
+//
+//##
+
+//** `<input>` background color
+@input-bg:                       rgba(255, 255, 255, 0);//@gray-darker;
+//** `<input disabled>` background color
+@input-bg-disabled:              rgba(255, 255, 255, 0);//@gray-darker;
+
+//** Text color for `<input>`s
+@input-color:                    #000;
+//** `<input>` border color
+@input-border:                   rgba(255, 255, 255, 0);//@gray-darker;
+
+// TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
+//** Default `.form-control` border radius
+// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
+@input-border-radius:            0;//@border-radius-base;
+//** Large `.form-control` border radius
+@input-border-radius-large:      0;//@border-radius-large;
+//** Small `.form-control` border radius
+@input-border-radius-small:      0;//@border-radius-small;
+
+//** Border color for inputs on focus
+@input-border-focus:             rgba(255, 255, 255, 0);//@gray-darker;
+
+//** Placeholder text color
+@input-color-placeholder:        @gray;
+
+//** Default `.form-control` height
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+//** Large `.form-control` height
+@input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+//** Small `.form-control` height
+@input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+
+//** `.form-group` margin
+@form-group-margin-bottom:       15px;
+
+@legend-color:                   #000;
+@legend-border-color:            rgba(255, 255, 255, 0);
+
+//** Background color for textual input addons
+@input-group-addon-bg:           #000;
+//** Border color for textual input addons
+@input-group-addon-border-color: rgba(255, 255, 255, 0);
+
+//** Disabled cursor for form controls and buttons.
+@cursor-disabled:                not-allowed;
+
+@input-border-radius:            0;
+//** Large `.form-control` border radius
+@input-border-radius-large:      0;
+//** Small `.form-control` border radius
+@input-border-radius-small:      0;
+
+//** Border color for inputs on focus
+@input-border-focus:             rgba(255, 255, 255, 0);
+
+//** Placeholder text color
+@input-color-placeholder:        #000;

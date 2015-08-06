@@ -1,0 +1,280 @@
+/*!
+ * cromatografico v1.0.0 (http://www.engenhoca.caosdesign.com.br/cromatografico/)
+ * Author: Caos Video e Design
+ * 2015
+ */
+
+
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+}
+
+ul.share-buttons li{
+  display: inline;
+  padding: 0 10px;
+  opacity: .3;
+}
+
+ul{
+  margin-bottom: 0;
+}
+
+
+
+body{
+  background: #f3f3f3;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+a.texto:hover{
+  opacity: 1;
+}
+
+
+small, 
+.small,
+body {
+  font-size: 16px;
+}
+
+.texto {
+  opacity: .5;
+  text-align: center;
+}
+
+section.wrap {
+  z-index: 10;
+  position: relative;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.resultado-container,
+.container-fluid,
+#cores-container,
+.resultado-container .cor-filho {
+  height: 100%;
+}
+
+#main-container {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -80px;
+  height: initial;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  cursor: default;
+}
+
+header h1.small{
+  display: inline-block;
+  border: 1px solid black;
+  border-bottom: 0;
+  border-top: 0;
+  padding: 0 24px;
+}
+
+#main-container #search-form,
+#main-container #search-form input {
+  width: 100%;
+  text-align: center;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#main-container #search-form{
+  margin-bottom: 0;
+  margin-top: 42px;
+}
+
+#main-container #search-form input {
+  height: 140px;
+  font-size: 40px;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+
+  font-size: 50px;
+  font-weight: 300;
+  opacity: .6;/*.3;*/
+
+  padding-bottom: 0;
+  padding-top: 0;
+  height: 70px;
+}
+
+#main-container #search-form input:focus,
+#main-container #search-form input:active #main-container #search-form input:visited,
+#main-container #search-form input:hover {
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#main-container #complemento-input{
+  text-align: center;
+  opacity: .3;
+  font-size: 14px;
+  display: inline;
+}
+
+#main-container .col-xs-2,
+#main-container .col-sm-2 {
+  margin-top: 70px;
+}
+
+#results {
+  display: none;
+}
+
+.resultado-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.resultado-container #footer-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+#cores-container{
+  padding-bottom: 60px;
+}
+
+#cores-container .cor-filho p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+
+
+.share-buttons{
+  display: none;
+}
+.share-buttons li:hover{
+  opacity: .6;
+}
+#complemento-input {
+  display: none;
+}
+#cores-container .cor-filho.hover p{
+  display: block;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+object[type='application/gas-events-uni'] {
+  display: none;
+}
+
+#about-page {
+  background: #101010;
+}
+#about-page .texto,
+#about-page .share-buttons a,
+#about-page header h1.small a {
+  color: #ffffff;
+}
+#about-page header h1.small{
+  border-color: #ffffff;
+}
+
+#about-page .container {
+  font-size: 20px;
+}
+#about-page .container p {
+  margin: 10px;
+}
+#about-page #main-container {
+  margin-top: 0;
+}
+#about-page #main-container p {
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  font-size: 14px;
+}
+#about-page #main-container p:last-child {
+  margin-bottom: 0px;
+}
+#about-page #caos-amarelo {
+  color: #ffcc00;
+  text-decoration: none;
+}
+#about-page .container.dois p {
+  border: 5px solid #000;
+  display: inline-block;
+  text-transform: uppercase;
+}
+#infografico-container {
+  margin-top: 40px;
+}
+#about-page .col-main{
+  position: relative;
+  top: 0;
+}
+#about-page #main-content{
+  position: absolute;
+  margin-top: -50%;
+}
+
+
+#about-page img{
+  width: 100%;
+}
+
+
+@media (max-width: 767px) {
+  #cores-container .cor-filho p{
+    display: none !important;
+  }
+  #main-container #search-form{
+    margin-top: 32px;
+  }
+  #about-page section.wrap{
+    top: 20px;
+    position: relative;
+  }
+  #about-page header{
+    min-height: 72px;
+  }
+  #about-page header,
+  #about-page footer,
+  #about-page #main-content,
+  #about-page #main-container{
+    margin-top: 0 !important;
+    position: relative !important;
+  }
+  #about-page header,
+  #about-page #main-container,
+  #about-page #main-container .row div {
+    margin-bottom: 30px;
+  }
+  #about-page #main-container{
+    padding: 0 40px;
+  }
+}

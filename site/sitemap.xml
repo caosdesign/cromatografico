@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generated-on="04 de Agosto de 2015 4:00" -->
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"> 
+  <url>
+    <loc>http://www.engenhoca.caosdesign.com.br/cromatografico/</loc>
+      <xhtml:link 
+         rel="alternate" 
+         hreflang="en" 
+         href="http://www.engenhoca.caosdesign.com.br/cromatografico/en/" 
+         />
+      <xhtml:link 
+         rel="alternate" 
+         hreflang="pt" 
+         href="http://www.engenhoca.caosdesign.com.br/cromatografico/" 
+         />
+    <lastmod>2015-07-29T17:18:47+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.engenhoca.caosdesign.com.br/cromatografico/sobre</loc>
+      <xhtml:link 
+         rel="alternate" 
+         hreflang="en" 
+         href="http://www.engenhoca.caosdesign.com.br/cromatografico/en/sobre" 
+         />
+      <xhtml:link 
+         rel="alternate" 
+         hreflang="pt" 
+         href="http://www.engenhoca.caosdesign.com.br/cromatografico/sobre" 
+         />
+    <lastmod>2015-07-29T17:18:47+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
