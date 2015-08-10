@@ -74,6 +74,7 @@
             <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fwww.engenhoca.caosdesign.com.br%2Fcromatografico%2F&text=descubra%20a%20cor%20das%20palavras%20no%20cromatogr%C3%A1fico%20-%20http%3A%2F%2Fbit.ly%2Fcromatografico%20&via=caosdesign" target="_blank" title="Tweet"><i class="fa fa-twitter"></i></a></li>
             <li><a href="http://www.tumblr.com/share?v=3&u=http%3A%2F%2Fwww.engenhoca.caosdesign.com.br%2Fcromatografico%2F&t=%7C%20CROMATOGR%C3%81FICO%20%7C&s=" target="_blank" title="Post to Tumblr"><i class="fa fa-tumblr"></i></a></li>
             <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fwww.engenhoca.caosdesign.com.br%2Fcromatografico%2F&title=%7C%20CROMATOGR%C3%81FICO%20%7C&summary=o%20cromatogr%C3%A1fico%20%C3%A9%20um%20projeto%20experimental%20da%20caos!%20v%C3%ADdeo%20%26%20design.%20uma%20m%C3%A1quina%20que%20se%20alimenta%20de%20palavras%20para%20criar%20paletas%20de%20cores%20din%C3%A2micas%20que%20se%20alteram%20a%20cada%20momento%20com%20o%20fluxo%20cont%C3%ADnuo%20das%20informa%C3%A7%C3%B5es%20disponibilizadas%20na%20rede.&source=http%3A%2F%2Fwww.engenhoca.caosdesign.com.br%2Fcromatografico%2F" target="_blank" title="Share on LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+            <li id="share-button">share palette</li>
           </ul>
         </div>
       </header>
@@ -83,7 +84,7 @@
           <div class="col-xs-6">
             <form id="search-form" class="navbar-form navbar-left toogle" role="search">
               <input type="text" class="form-control texto" placeholder="what's the word?">
-              <p id="complemento-input" class=""></p>
+              <div id="complemento-input-container"><span id="complemento-input" class=""></span><div id="share-palette-container"><span> | </span><span id="share-button">share</span></div></div>
             </form>
           </div>
           <div class="col-xs-2 text-right"><a href="http://caosdesign.com.br" target="_blank" class="texto">
@@ -104,6 +105,14 @@
           </p>
         </div>
         <div id="results"></div>
+
+        <div id="share-pallete-container" style=" position: absolute; bottom: 0;">
+          <canvas id="share-canvas" width="1200" height="630" style="display: none"></canvas>
+          <div id="fb-root"></div>
+          <form method="post" accept-charset="utf-8" name="form1">
+              <input name="hidden_data" id='hidden_data' type="hidden"/>
+          </form>
+        </div>
       </div>
     </section>
 
