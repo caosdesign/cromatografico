@@ -1,47 +1,54 @@
+<?php
+  $my_lang = $_GET["lang"]=='en' ? $_GET["lang"] : 'pt-br';
+  $my_description = ($my_lang == 'en') ? 'cromatográfico is an experimental project of caos! vídeo & design. a machine that feeds on words to create dynamic color palettes that change every time with the continuous flow of information available on the network.' : 'o cromatográfico é um projeto experimental da caos! vídeo & design. uma máquina que se alimenta de palavras para criar paletas de cores dinâmicas que se alteram a cada momento com o fluxo contínuo das informações disponibilizadas na rede.';
+  $my_keywords = ($my_lang == 'en') ? 'color, word, engenhoca, caos, experiment' : 'cor, palavra, engenhoca, caos, experimento';
+?>
 <!DOCTYPE html>
+
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7 ie" <?php echo $my_lang; ?>><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8 ie" <?php echo $my_lang; ?>><![endif]-->
+<!--[if IE 8]><html class="lt-ie9 ie" <?php echo $my_lang; ?>><![endif]-->
+<!--[if gt IE 8]><!--> <html class="" lang="<?php echo $my_lang; ?>"> <!--<![endif]-->
+
 <!-- Marcação de microdados adicionada pelo Assistente de marcação para dados estruturados do Google. -->
-<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Caos :: Vídeo e Design">
 
-    <meta name="description" content="o cromatográfico é um projeto experimental da caos! vídeo & design. uma máquina que se alimenta de palavras para criar paletas de cores dinâmicas que se alteram a cada momento com o fluxo contínuo das informações disponibilizadas na rede.">
-    <meta name="keywords" content="cor, palavra, engenhoca, caos, experimento" />
+    <meta name="description" content="<?php echo $my_description; ?>"><!-- cromatográfico is an experimental project of caos! vídeo & design. a machine that feeds on words to create dynamic color palettes that change every time with the continuous flow of information available on the network. -->
+    <meta name="keywords" content="<?php echo $my_keywords; ?>" /><!-- color, word, engenhoca, caos, experiment -->
     <meta name="author" content="caos! video e design">
 
     <meta property="og:title" content="| CROMATOGRÁFICO |"/>
-    <meta property="og:description" content="o cromatográfico é um projeto experimental da caos! vídeo & design. uma máquina que se alimenta de palavras para criar paletas de cores dinâmicas que se alteram a cada momento com o fluxo contínuo das informações disponibilizadas na rede."/>
+    <meta property="og:description" content="<?php echo $my_description; ?>"/>
     <meta property="og:url" content="http://www.engenhoca.caosdesign.com.br/cromatografico/"/>
     <meta property="og:site_name" content="| CROMATOGRÁFICO |"/>
     <meta property="og:image" content="http://www.engenhoca.caosdesign.com.br/cromatografico/share_cromatografico.jpg"/>
     <meta property="og:type" content="article" />
     <meta property="article:publisher" content="caosdesign" />
     <meta property="fb:profile_id" content="114254061954373" />
-    <meta property="fb:app_id" content="1613857125531579" /> 
-    <meta property="og:type" content="cromatografico-test:color_palette" />
-    
 
-    <link rel="canonical" href="http://www.engenhoca.caosdesign.com.br/cromatografico/" />
+    <link rel="canonical" href="http://www.engenhoca.caosdesign.com.br/cromatografico/<?php echo $my_lang == 'en' ? '?lang=en' : ''; ?>" />
     <link hreflang="pt-br" rel="alternate" href="http://www.engenhoca.caosdesign.com.br/cromatografico/">
-    <link hreflang="en" rel="alternate" href="http://www.engenhoca.caosdesign.com.br/cromatografico/en/">
+    <link hreflang="en" rel="alternate" href="http://www.engenhoca.caosdesign.com.br/cromatografico/?lang=en>">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="./icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+    <link rel="manifest" href="./icons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="./icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- <link rel="SHORTCUT ICON" href="/favicon.ico" /> -->
 
@@ -82,11 +89,11 @@
       </header>
       <div id="main-container" class="container-fluid">
         <div class="row">
-          <div class="col-xs-2 text-left"><a href="sobre.html" class="texto">sobre</a></div>
+          <div class="col-xs-2 text-left"><a href="<?php echo ($my_lang == 'en') ? './sobre.php?lang=en' : './sobre.php' ?>" class="texto"><?php echo $my_lang == 'en' ? 'about' : 'sobre' ?></a></div>
           <div class="col-xs-6">
             <form id="search-form" class="navbar-form navbar-left toogle" role="search">
-              <input type="text" class="form-control texto" placeholder="qual a palavra?">
-              <div id="complemento-input-container"><span id="complemento-input" class=""></span><div id="share-palette-container"><span> | </span><span id="share-button">share</span></div></div>
+              <input type="text" class="form-control texto" placeholder="<?php echo $my_lang == 'en' ? 'what\'s the word?' : 'qual a palavra?' ?>">
+              <div id="complemento-input-container"><span id="complemento-input" class=""></span><div id="share-palette-container"><span> | </span><span id="share-button"><?php echo $my_lang == 'en' ? 'share' : 'compartilhar' ?></span></div></div>
             </form>
           </div>
           <div class="col-xs-2 text-right"><a href="http://caosdesign.com.br" target="_blank" class="texto">
@@ -101,9 +108,9 @@
       <div class="container-fluid">
         <div id="cores-container" class="row text-center"></div>
         <div id="footer-container" class="row text-center">
-          <p id="hex-container" class="text-uppercase texto"></p>
+          <p class="text-uppercase texto"></p>
           <p id="lang-selector">
-            <a class="text-lowercase texto" href="./">palavras</a><span class="texto">  |  </span><a class="text-lowercase texto" href="./en/">words</a>
+            <a class="text-lowercase texto" href="./">palavras</a><span class="texto">  |  </span><a class="text-lowercase texto" href="./?lang=en">words</a>
           </p>
         </div>
         <div id="results"></div>

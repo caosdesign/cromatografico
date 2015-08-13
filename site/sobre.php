@@ -1,17 +1,27 @@
+<?php
+  $my_lang = $_GET["lang"]=='en' ? $_GET["lang"] : 'pt-br';
+  $my_description = ($my_lang == 'en') ? 'cromatográfico is an experimental project of caos! vídeo & design. a machine that feeds on words to create dynamic color palettes that change every time with the continuous flow of information available on the network.' : 'o cromatográfico é um projeto experimental da caos! vídeo & design. uma máquina que se alimenta de palavras para criar paletas de cores dinâmicas que se alteram a cada momento com o fluxo contínuo das informações disponibilizadas na rede.';
+  $my_keywords = ($my_lang == 'en') ? 'color, word, engenhoca, caos, experiment' : 'cor, palavra, engenhoca, caos, experimento';
+?>
 <!DOCTYPE html>
+
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7 ie" <?php echo $my_lang; ?>><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8 ie" <?php echo $my_lang; ?>><![endif]-->
+<!--[if IE 8]><html class="lt-ie9 ie" <?php echo $my_lang; ?>><![endif]-->
+<!--[if gt IE 8]><!--> <html class="" lang="<?php echo $my_lang; ?>"> <!--<![endif]-->
+
 <!-- Marcação de microdados adicionada pelo Assistente de marcação para dados estruturados do Google. -->
-<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Caos :: Vídeo e Design">
 
-    <meta name="description" content="o cromatográfico é um projeto experimental da caos! vídeo & design. uma máquina que se alimenta de palavras para criar paletas de cores dinâmicas que se alteram a cada momento com o fluxo contínuo das informações disponibilizadas na rede.">
-    <meta name="keywords" content="cor, palavra, engenhoca, caos, experimento" />
+    <meta name="description" content="<?php echo $my_description; ?>"><!-- cromatográfico is an experimental project of caos! vídeo & design. a machine that feeds on words to create dynamic color palettes that change every time with the continuous flow of information available on the network. -->
+    <meta name="keywords" content="<?php echo $my_keywords; ?>" /><!-- color, word, engenhoca, caos, experiment -->
     <meta name="author" content="caos! video e design">
 
     <meta property="og:title" content="| CROMATOGRÁFICO |"/>
-    <meta property="og:description" content="o cromatográfico é um projeto experimental da caos! vídeo & design. uma máquina que se alimenta de palavras para criar paletas de cores dinâmicas que se alteram a cada momento com o fluxo contínuo das informações disponibilizadas na rede."/>
+    <meta property="og:description" content="<?php echo $my_description; ?>"/>
     <meta property="og:url" content="http://www.engenhoca.caosdesign.com.br/cromatografico/"/>
     <meta property="og:site_name" content="| CROMATOGRÁFICO |"/>
     <meta property="og:image" content="http://www.engenhoca.caosdesign.com.br/cromatografico/share_cromatografico.jpg"/>
@@ -19,7 +29,7 @@
     <meta property="article:publisher" content="caosdesign" />
     <meta property="fb:profile_id" content="114254061954373" />
 
-    <link rel="canonical" href="http://www.engenhoca.caosdesign.com.br/cromatografico/sobre" />
+    <link rel="canonical" href="http://www.engenhoca.caosdesign.com.br/cromatografico/sobre<?php echo $my_lang == 'en' ? '?lang=en' : ''; ?>" />
     <link hreflang="pt-br" rel="alternate" href="http://www.engenhoca.caosdesign.com.br/cromatografico/sobre">
     <link hreflang="en" rel="alternate" href="http://www.engenhoca.caosdesign.com.br/cromatografico/en/sobre">
 
@@ -78,14 +88,22 @@
       </header>
       <div id="main-container" class="container-fluid">
         <div class="row">
-          <div class="col-sm-3 col-xs-10 text-left"><a href="./" class="texto">voltar</a></div>
+          <div class="col-sm-3 col-xs-10 text-left"><a href="<?php echo ($my_lang == 'en') ? './?lang=en' : './' ?>" class="texto"><?php echo $my_lang == 'en' ? 'back' : 'voltar' ?></a></div>
           <div class="col-sm-4 col-xs-10 texto col-main">
             <div id="main-content" style="opacity:0;">
+              <?php if ($my_lang == 'en') { ?>
+                <span itemprop="articleBody"><p class="text-left text-lowercase ">we are language beings. immersed in a maze of signs and meanings. through the words we translate the universe around us. names, titles, initials, nicknames. the words mediate our connection with reality. they are the first interface of communication. but what is the essence of a word? what is its deepest meaning? what is the color of a word?</p>
+                <p class="text-left text-lowercase ">cromatográfico is an experimental project by <a href="http://caosdesign.com.br" target="_blank" class="caos-amarelo">caos! vídeo & design</a>. a word-fed-machine that creates dynamic color palettes that change every time with the continuous flow of information available on the network.</p></span>
+                <div id="infografico-container">
+                  <img itemprop="image" src="./images/infografico_cromatografico_en.svg" width="428" height="78" alt="Infográfico Cromatográfico"/>
+                </div>
+              <?php } else { ?>
               <span itemprop="articleBody"><p class="text-left text-lowercase ">somos seres de linguagem. imersos em um emaranhado de signos e significados. através das palavras traduzimos o universo a nossa volta. nomes, títulos, siglas, apelidos. as palavras intermediam a nossa lida com o real. são a interface primeira da comunicação. mas qual é a essência de uma palavra? qual é a sua acepção mais profunda? qual é a cor de uma palavra?</p>
               <p class="text-left text-lowercase ">o cromatográfico é um projeto experimental da <a href="http://caosdesign.com.br" target="_blank" class="caos-amarelo">caos! vídeo & design</a>. uma máquina que se alimenta de palavras para criar paletas de cores dinâmicas que se alteram a cada momento com o fluxo contínuo das informações disponibilizadas na rede.</p></span>
               <div id="infografico-container">
                 <img itemprop="image" src="./images/infografico_cromatografico.svg" width="428" height="78" alt="Infográfico Cromatográfico"/>
               </div>
+              <?php } ?>
               <p class="text-center text-lowercase git-container"><a href="https://github.com/caosdesign/cromatografico" target="_blank" class="caos-amarelo">repositório no github</a></p>
             </div>
           </div>
