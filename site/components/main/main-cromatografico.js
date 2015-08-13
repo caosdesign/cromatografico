@@ -520,7 +520,7 @@
         $('#share-palette-container').css('display', 'none');
         $('#search-form input').val('');
         $('#search-form input').attr('placeholder', my_text_trans[3]);//'qual a palavra?');
-        document.location.search = '';
+        document.location.search = my_lang=='en' ? 'lang=en' : '';
         $('#lang-selector').removeClass('hide');
       }
     });
