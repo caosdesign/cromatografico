@@ -93,7 +93,7 @@
           <div class="col-xs-6">
             <form id="search-form" class="navbar-form navbar-left toogle" role="search">
               <input type="text" class="form-control texto" placeholder="<?php echo $my_lang == 'en' ? 'what\'s the word?' : 'qual a palavra?' ?>">
-              <div id="complemento-input-container"><span id="complemento-input" class=""></span><div id="share-palette-container"><span> | </span><span id="share-button"><?php echo $my_lang == 'en' ? 'share' : 'compartilhar' ?></span></div></div>
+              <div id="complemento-input-container"><span id="complemento-input" class=""></span><div id="share-palette-container"><span> | </span><span id="share-button"><?php echo $my_lang == 'en' ? 'share to facebook' : 'compartilhar no facebook' ?></span></div></div>
             </form>
           </div>
           <div class="col-xs-2 text-right"><a href="http://caosdesign.com.br" target="_blank" class="texto">
@@ -108,14 +108,14 @@
       <div class="container-fluid">
         <div id="cores-container" class="row text-center"></div>
         <div id="footer-container" class="row text-center">
-          <p class="text-uppercase texto"></p>
+          <p id="hex-container" class="text-uppercase texto"></p>
           <p id="lang-selector">
             <a class="text-lowercase texto" href="./">palavras</a><span class="texto">  |  </span><a class="text-lowercase texto" href="./?lang=en">words</a>
           </p>
         </div>
         <div id="results"></div>
 
-        <div id="share-pallete-container" style=" position: absolute; bottom: 0;">
+        <div id="share-pallete-container" style=" position: absolute; top: 0;">
           <canvas id="share-canvas" width="1200" height="630" style="display: none"></canvas>
           <div id="fb-root"></div>
           <form method="post" accept-charset="utf-8" name="form1">

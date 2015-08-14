@@ -6,14 +6,14 @@
       <xhtml:link 
          rel="alternate" 
          hreflang="en" 
-         href="http://www.engenhoca.caosdesign.com.br/cromatografico/en/" 
+         href="http://www.engenhoca.caosdesign.com.br/cromatografico/?lang=en" 
          />
       <xhtml:link 
          rel="alternate" 
          hreflang="pt" 
          href="http://www.engenhoca.caosdesign.com.br/cromatografico/" 
          />
-    <lastmod>2015-07-29T17:18:47+00:00</lastmod>
+    <lastmod>2015-08-12T17:18:47+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>1.0</priority>
   </url>
@@ -22,14 +22,14 @@
       <xhtml:link 
          rel="alternate" 
          hreflang="en" 
-         href="http://www.engenhoca.caosdesign.com.br/cromatografico/en/sobre" 
+         href="http://www.engenhoca.caosdesign.com.br/cromatografico/sobre.php?lang=en" 
          />
       <xhtml:link 
          rel="alternate" 
          hreflang="pt" 
-         href="http://www.engenhoca.caosdesign.com.br/cromatografico/sobre" 
+         href="http://www.engenhoca.caosdesign.com.br/cromatografico/sobre.php" 
          />
-    <lastmod>2015-07-29T17:18:47+00:00</lastmod>
+    <lastmod>2015-08-12T17:18:47+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>1.0</priority>
   </url>
