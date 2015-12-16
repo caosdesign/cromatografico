@@ -133,6 +133,10 @@
     var per_page = 8; // api max
     var googleString = 'https://ajax.googleapis.com/ajax/services/search/images?v=1.0&as_filetype=jpg&restrict=cc_attribute&as_rights=cc_publicdomain|cc_noncommercial|cc_sharealike&imgc=color&imgtype=photo&imgsz=medium|large&rsz='+per_page;//&start=0&q=';
     
+    //https://www.flickr.com/services/api/explore/flickr.photos.search
+    var flickrString = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=3479c4b4000550c5ec123d9b46258ff3&privacy_filter=1&content_type=1&media=photos&per_page='+per_page+'&format=json&nojsoncallback=1';//&text=';
+
+
     var searchcall = function (argument) {
       resetTool(my_text_trans[0]);
       $('#complemento-input').css('cursor','default');
@@ -147,13 +151,14 @@
 
     var startSearch = function (argument, offset) {
       $.ajax({
-        url: googleString+'&start='+offset+'&q='+argument,
+        url: flickrString+'&page='+offset+'&text='+argument,//googleString+'&start='+offset+'&q='+argument,
         type: 'GET',
         crossDomain: true,
-        dataType: 'jsonp',
+        dataType: 'json',
         success: function(result) { 
+          //console.log(result);
 
-          var result_var = result.responseData.results;
+          var result_var = result.photos.photo;//result.responseData.results;
 
           if(result_var.length == 0){
             $('#complemento-input').text(my_text_trans[2]);//('tente outra palavra');
@@ -179,9 +184,13 @@
     }
 
     var resultSearchLoop = function (result_var, i) {
-      var img_src = result_var[i].unescapedUrl;
+      //var img_src = result_var[i].unescapedUrl;
+
+      //https://www.flickr.com/services/api/misc.urls.html
+      var img_src = 'https://farm'+result_var[i].farm+'.staticflickr.com/'+result_var[i].server+'/'+result_var[i].id+'_'+result_var[i].secret+'.jpg';//result.items[i].link;//result.items[i].image.thumbnailLink;//
+          
             
-      var $img_element = $( '<img crossOrigin="anonymous" class="target-image" src="'+img_src+'" title-ref="'+result_var[i].titleNoFormatting+'">' );
+      var $img_element = $( '<img crossOrigin="anonymous" class="target-image" src="'+img_src+'" >' );//title-ref="'+result_var[i].titleNoFormatting+'">' );
       $('#results').append( $img_element );
       $img_element.crossOrigin = 'anonymous';
 
@@ -206,7 +215,7 @@
           });
 
           if(hex_str != '#000000' && hex_str != '#ffffff' && src_ok){
-            console.log(_img_src);
+            //console.log(_img_src);
           
             $('#cores-container').append( '<div class="cor-filho col-sm-1 col-xs-1" style="background: '+rbg_str+'" img-ref="'+this.src+'"><p class="texto text-uppercase">'+hex_str+'</p></div>' );
 

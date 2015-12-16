@@ -4,7 +4,7 @@
 <rect x="2.781" y="38.757" fill="none" width="108.749" height="36.993"></rect>
 <text transform="matrix(1 0 0 1 8.0515 48.8223)"><tspan x="17" y="0" fill="#FFFFFF" font-family="'Open Sans'" font-size="14">you type a </tspan><tspan x="35" y="20" fill="#FFFFFF" font-family="'Open Sans'" font-size="14">word</tspan></text>
 <rect x="153.834" y="38.757" fill="none" width="108.749" height="36.993"></rect>
-<text transform="matrix(1 0 0 1 161.5968 48.8223)"><tspan x="-5" y="0" fill="#FFFFFF" font-family="'Open Sans'" font-size="14">google searches  </tspan><tspan x="15" y="20" fill="#FFFFFF" font-family="'Open Sans'" font-size="14">the images</tspan></text>
+<text transform="matrix(1 0 0 1 161.5968 48.8223)"><tspan x="5" y="0" fill="#FFFFFF" font-family="'Open Sans'" font-size="14">flickr searches  </tspan><tspan x="15" y="20" fill="#FFFFFF" font-family="'Open Sans'" font-size="14">the images</tspan></text>
 <rect x="305.25" y="38.757" fill="none" width="111.309" height="36.993"></rect>
 <text transform="matrix(1 0 0 1 306.5288 48.8223)"><tspan x="10" y="0" fill="#FFFFFF" font-family="'Open Sans'" font-size="14">we generate a </tspan><tspan x="17" y="20" fill="#FFFFFF" font-family="'Open Sans'" font-size="14">color palette</tspan></text>
 <text transform="matrix(1 0 0 1 278.4753 16.3247)" fill="#FFFFFF" font-family="'OpenSans-Bold'" font-size="15.8203">=</text>
