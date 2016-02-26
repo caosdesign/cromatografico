@@ -31,7 +31,7 @@
 
     <link rel="canonical" href="http://www.engenhoca.caosdesign.com.br/cromatografico/sobre<?php echo $my_lang == 'en' ? '?lang=en' : ''; ?>" />
     <link hreflang="pt-br" rel="alternate" href="http://www.engenhoca.caosdesign.com.br/cromatografico/sobre">
-    <link hreflang="en" rel="alternate" href="http://www.engenhoca.caosdesign.com.br/cromatografico/en/sobre">
+    <link hreflang="en" rel="alternate" href="http://www.engenhoca.caosdesign.com.br/cromatografico/sobre.php?lang=en">
 
     <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
