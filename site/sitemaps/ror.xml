@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://www.engenhoca.caosdesign.com.br/cromatografico/</title>
+  <link>http://www.engenhoca.caosdesign.com.br/cromatografico/</link>
+
+<item>
+     <link>http://www.engenhoca.caosdesign.com.br/cromatografico/</link>
+     <title>CROMATOGRÁFICO</title>
+     <description>o cromatográfico é um projeto experimental da caos! vídeo &amp; design. uma máquina que se alimenta de palavras para criar paletas de cores dinâmicas que se alteram a cada momento com o fluxo contínuo das informações disponibilizadas na rede.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://www.engenhoca.caosdesign.com.br/cromatografico/sobre.php</link>
+     <title>CROMATOGRÁFICO</title>
+     <description>o cromatográfico é um projeto experimental da caos! vídeo &amp; design. uma máquina que se alimenta de palavras para criar paletas de cores dinâmicas que se alteram a cada momento com o fluxo contínuo das informações disponibilizadas na rede.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://www.engenhoca.caosdesign.com.br/cromatografico/?lang=en</link>
+     <title>CROMATOGRÁFICO</title>
+     <description>cromatográfico is an experimental project of caos! vídeo &amp; design. a machine that feeds on words to create dynamic color palettes that change every time with the continuous flow of information available on the network.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://www.engenhoca.caosdesign.com.br/cromatografico/sobre.php?lang=en</link>
+     <title>CROMATOGRÁFICO</title>
+     <description>cromatográfico is an experimental project of caos! vídeo &amp; design. a machine that feeds on words to create dynamic color palettes that change every time with the continuous flow of information available on the network.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
