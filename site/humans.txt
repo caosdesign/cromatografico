@@ -23,4 +23,4 @@ Designer: Isabel Xavier
 Developer: Jeanne Sivares
 
 /* SPECIAL THANKS */
-Name: Google Search Engine
+Name: Flickr
