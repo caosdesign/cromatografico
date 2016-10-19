@@ -107,7 +107,7 @@
               <p class="text-center text-lowercase git-container"><a href="https://github.com/caosdesign/cromatografico" target="_blank" class="caos-amarelo">repositório no github</a></p>
             </div>
           </div>
-          <div class="col-sm-3 col-xs-10 text-right visible-sm visible-md visible-lg"><a href="index.html" class="texto"><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">caos</span></span>!</a></div>
+          <div class="col-sm-3 col-xs-10 text-right visible-sm visible-md visible-lg"><a href="http://caosdesign.com.br" class="texto"><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">caos</span></span>!</a></div>
         </div>
       </div>
       <meta itemprop="datePublished" content="2015-07-29">
